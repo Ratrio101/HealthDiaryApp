@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -27,9 +26,9 @@ namespace HealthDiaryApp.Views
 
             entries = await App.Database.GetEntriesAsync();
 
-            ShowWeightChart();
+            ShowWeightChart(); 
         }
-        void ShowWeightChart()
+        void ShowWeightChart() // показ графика веса
         {
             chart.Chart = new LineChart
             {
@@ -43,7 +42,7 @@ namespace HealthDiaryApp.Views
             };
         }
 
-        void ShowSleepChart()
+        void ShowSleepChart() // показ графика сна
         {
             chart.Chart = new LineChart
             {
@@ -57,7 +56,7 @@ namespace HealthDiaryApp.Views
             };
         }
 
-        void ShowStepsChart()
+        void ShowStepsChart() // показ графика шагов
         {
             chart.Chart = new LineChart
             {
@@ -71,7 +70,7 @@ namespace HealthDiaryApp.Views
             };
         }
 
-        void ShowPulseChart()
+        void ShowPulseChart() // показ графика пульса
         {
             chart.Chart = new LineChart
             {
@@ -84,7 +83,7 @@ namespace HealthDiaryApp.Views
                     })
             };
         }
-
+        // Обработка действий при нажатии кнопок
         void Weight_Clicked(object sender, EventArgs e) => ShowWeightChart();
         void Sleep_Clicked(object sender, EventArgs e) => ShowSleepChart();
         void Steps_Clicked(object sender, EventArgs e) => ShowStepsChart();

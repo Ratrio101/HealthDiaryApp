@@ -6,9 +6,9 @@ using System.Runtime.CompilerServices;
 
 namespace HealthDiaryApp.ViewModels
 {
-    public class BaseViewModel : INotifyPropertyChanged
+    public class BaseViewModel : INotifyPropertyChanged // базовая VM
     {
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged; //автообновление интерфейса
 
         protected void OnPropertyChanged([CallerMemberName] string name = null)
         {

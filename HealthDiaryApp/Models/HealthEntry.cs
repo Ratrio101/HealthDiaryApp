@@ -1,27 +1,27 @@
 ﻿using System;
-using SQLite;
+using SQLite; // работа с SQLite
 
 namespace HealthDiaryApp.Models
 {
-    public class HealthEntry
+    public class HealthEntry // ведение дневника
     {
         [PrimaryKey, AutoIncrement]
-        public int Id { get; set; }
+        public int Id { get; set; } // номер записи
 
-        public DateTime Date { get; set; }
+        public DateTime Date { get; set; } // дата
 
-        // Активность
+        // Активность (в шагах)
         public int Steps { get; set; }
 
-        // Сон
+        // Сон (в часах)
         public double SleepHours { get; set; }
 
-        // Питание
+        // Питание (калории) 
         public int Calories { get; set; }
 
         // Показатели здоровья
-        public int Pulse { get; set; }
-        public int Pressure { get; set; }
-        public double Weight { get; set; }
+        public int Pulse { get; set; } // пульс
+        public int Pressure { get; set; } // давление
+        public double Weight { get; set; } // вес
     }
 }

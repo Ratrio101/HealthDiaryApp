@@ -17,17 +17,17 @@ namespace HealthDiaryApp.Views
         {
             InitializeComponent();
         }
-        async void Save_Clicked(object sender, EventArgs e)
+        async void Save_Clicked(object sender, EventArgs e) // логика при сохранении данных
         {
             var entry = new HealthEntry
             {
-                Date = DateTime.Now,
-                Steps = int.Parse(steps.Text),
-                SleepHours = double.Parse(sleep.Text),
-                Calories = int.Parse(calories.Text),
-                Pulse = int.Parse(pulse.Text),
-                Pressure = int.Parse(pressure.Text),
-                Weight = double.Parse(weight.Text)
+                Date = DateTime.Now, // дата
+                Steps = int.Parse(steps.Text), // шаги
+                SleepHours = double.Parse(sleep.Text), // сон
+                Calories = int.Parse(calories.Text), // калории
+                Pulse = int.Parse(pulse.Text), // пульс
+                Pressure = int.Parse(pressure.Text), // давление
+                Weight = double.Parse(weight.Text) // вес
             };
 
             await App.Database.SaveEntryAsync(entry);

@@ -14,7 +14,7 @@ namespace HealthDiaryApp
 {
     public partial class MainPage : ContentPage
     {
-        MainViewModel vm;
+        MainViewModel vm; // VM
 
         public MainPage()
         {
@@ -29,15 +29,15 @@ namespace HealthDiaryApp
             vm.LoadCommand.Execute(null);
         }
 
-        async void Add_Clicked(object sender, EventArgs e)
+        async void Add_Clicked(object sender, EventArgs e) // нажатие на кнопку добавления
         {
             await Navigation.PushAsync(new AddEntryPage());
         }
-        async void Charts_Clicked(object sender, EventArgs e)
+        async void Charts_Clicked(object sender, EventArgs e) // нажатие на кнопку "Графики"
         {
             await Navigation.PushAsync(new ChartPage());
         }
-        void StartReminderTimer()
+        void StartReminderTimer() // логика работы таймера (в перспективе)
         {
             Device.StartTimer(TimeSpan.FromHours(3), () =>
             {

@@ -11,11 +11,11 @@ namespace HealthDiaryApp
     public partial class App : Application
     {
 
-        static HealthDatabase database;
+        static HealthDatabase database; // БД
 
         public static HealthDatabase Database
         {
-            get
+            get //строка подключения к БД SQLite
             {
                 if (database == null)
                 {
@@ -33,7 +33,7 @@ namespace HealthDiaryApp
         public App()
         {
             InitializeComponent();
-            MainPage = new TabbedPage
+            MainPage = new TabbedPage // главная страница с вкладками
             {
                 Children =
     {
