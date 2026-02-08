@@ -7,7 +7,6 @@
 
         <Button Text="Добавить"
                 Clicked="Add_Clicked"/>
-
         <CollectionView ItemsSource="{Binding Entries}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
