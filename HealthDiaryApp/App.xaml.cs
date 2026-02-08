@@ -1,16 +1,38 @@
-﻿using System;
+﻿using HealthDiaryApp.Database;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.IO;
+
 
 namespace HealthDiaryApp
 {
     public partial class App : Application
     {
+
+        static HealthDatabase database;
+
+        public static HealthDatabase Database
+        {
+            get
+            {
+                if (database == null)
+                {
+                    var path = Path.Combine(
+                        Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+                        "health.db3");
+
+                    database = new HealthDatabase(path);
+                }
+
+                return database;
+            }
+        }
+
         public App()
         {
             InitializeComponent();
-
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()

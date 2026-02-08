@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HealthDiaryApp.Views.AddEntryPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+
+            <Entry Placeholder="Steps" x:Name="steps"/>
+            <Entry Placeholder="Sleep" x:Name="sleep"/>
+            <Entry Placeholder="Calories" x:Name="calories"/>
+            <Entry Placeholder="Pulse" x:Name="pulse"/>
+            <Entry Placeholder="Pressure" x:Name="pressure"/>
+            <Entry Placeholder="Weight" x:Name="weight"/>
+
+            <Button Text="Save" Clicked="Save_Clicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
