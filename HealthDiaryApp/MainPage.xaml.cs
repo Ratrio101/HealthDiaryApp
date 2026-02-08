@@ -1,4 +1,5 @@
 ﻿using HealthDiaryApp.ViewModels;
+using HealthDiaryApp.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,7 +29,11 @@ namespace HealthDiaryApp
 
         async void Add_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Views.AddEntryPage());
+            await Navigation.PushAsync(new AddEntryPage());
+        }
+        async void Charts_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ChartPage());
         }
         void StartReminderTimer()
         {

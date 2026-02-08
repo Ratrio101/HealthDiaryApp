@@ -1,8 +1,9 @@
 ﻿using HealthDiaryApp.Database;
+using HealthDiaryApp.Views;
 using System;
+using System.IO;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using System.IO;
 
 
 namespace HealthDiaryApp
@@ -32,7 +33,14 @@ namespace HealthDiaryApp
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new TabbedPage
+            {
+                Children =
+    {
+        new NavigationPage(new MainPage()) { Title = "Дневник" },
+        new NavigationPage(new ChartPage()) { Title = "Графики" }
+    }
+            };
         }
 
         protected override void OnStart()
