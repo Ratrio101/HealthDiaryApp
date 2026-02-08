@@ -14,8 +14,13 @@
                     <Frame Margin="5">
                         <StackLayout>
 
+                            <Label Text="Дата:" FontAttributes="Bold"/>
                             <Label Text="{Binding Date}" />
+
+                            <Label Text="Шаги:" FontAttributes="Bold"/>
                             <Label Text="{Binding Steps}" />
+
+                            <Label Text="Вес:" FontAttributes="Bold"/>
                             <Label Text="{Binding Weight}" />
 
                         </StackLayout>

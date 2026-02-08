@@ -5,13 +5,25 @@
     xmlns:charts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
     x:Class="HealthDiaryApp.Views.ChartPage">
     <ContentPage.Content>
-        <StackLayout Padding="20">
+        <StackLayout Padding="20" Spacing="10">
 
-            <Label Text="График веса"
+            <Label Text="Графики здоровья"
                FontSize="Large"
                HorizontalOptions="Center"/>
 
-            <charts:ChartView 
+            <!-- Переключатели -->
+            <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="Center"
+                     Spacing="10">
+
+                <Button Text="Вес" Clicked="Weight_Clicked"/>
+                <Button Text="Сон" Clicked="Sleep_Clicked"/>
+                <Button Text="Шаги" Clicked="Steps_Clicked"/>
+                <Button Text="Пульс" Clicked="Pulse_Clicked"/>
+
+            </StackLayout>
+
+            <charts:ChartView
             x:Name="chart"
             HeightRequest="250"/>
 
